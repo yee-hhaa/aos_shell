@@ -1,23 +1,55 @@
-[Project 要求的功能]
-  <指令>           執行一般程式，例如 ls -l
-  exit             離開 shell
-  cd <dir>         切換目錄
-  path [dir ...]   設定搜尋路徑（預設 /bin）
-  cmd > file       輸出重導向
-  cmd < file       輸入重導向
-  cmd1 | cmd2      pipe
-  cmd1 & cmd2      平行執行
+# yeeshell 🦖
 
-[額外功能]
-  help             列出所有指令
-  now              顯示目前日期時間
-  history          列出之前輸入過的指令
-  timeit <cmd>     執行指令並顯示花費時間
-  yee              召喚恐龍
-  art [name]       畫圖：dino / cat / rocket / coffee
-  run              恐龍走過螢幕的動畫
-  Ctrl+C           只中斷正在執行的指令，不會關掉 shell
-  封面             互動模式啟動時顯示
-  prompt           顯示 [時間] 使用者:目前目錄>
+用 C 寫的簡易 Unix shell，OS 課程 Project 1（參考 OSTEP `wish`），另外加了一些額外功能。
 
-錯誤時一律印出：An error has occurred
+## 編譯與執行
+
+需要 Linux / WSL / macOS。
+
+```bash
+gcc -Wall -o yeeshell yeeshell.c
+
+./yeeshell              # 互動模式
+./yeeshell batch.txt    # batch 模式（從檔案讀指令）
+```
+
+## 功能
+
+### Project 要求
+
+| 指令 | 說明 |
+|------|------|
+| `<指令>` | 執行一般程式，例如 `ls -l` |
+| `exit` | 離開 shell |
+| `cd <dir>` | 切換目錄 |
+| `path [dir ...]` | 設定搜尋路徑（預設 `/bin`） |
+| `cmd > file` | 輸出重導向 |
+| `cmd < file` | 輸入重導向 |
+| `cmd1 \| cmd2` | pipe |
+| `cmd1 & cmd2` | 平行執行 |
+
+### 額外功能
+
+| 指令 | 說明 |
+|------|------|
+| `help` | 列出所有指令 |
+| `now` | 顯示目前日期時間 |
+| `history` | 列出之前輸入過的指令 |
+| `timeit <cmd>` | 執行指令並顯示花費時間 |
+| `yee` | 召喚恐龍 |
+| `art [name]` | 畫圖：`dino` / `cat` / `rocket` / `coffee` |
+| `run` | 恐龍走過螢幕的動畫 |
+| `Ctrl+C` | 只中斷正在執行的指令，不會關掉 shell |
+| 封面 | 互動模式啟動時顯示 |
+| prompt | 顯示 `[時間] 使用者:目前目錄>` |
+
+錯誤時一律印出 `An error has occurred`。
+
+## 範例
+
+```
+[21:30:12] yee:/home/yee> ls -l > out.txt
+[21:30:15] yee:/home/yee> cat < out.txt | wc -l
+[21:30:20] yee:/home/yee> timeit ls & pwd
+[21:30:25] yee:/home/yee> art cat
+```
