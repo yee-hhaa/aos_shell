@@ -1,0 +1,23 @@
+[Project 要求的功能]
+  <指令>           執行一般程式，例如 ls -l
+  exit             離開 shell
+  cd <dir>         切換目錄
+  path [dir ...]   設定搜尋路徑（預設 /bin）
+  cmd > file       輸出重導向
+  cmd < file       輸入重導向
+  cmd1 | cmd2      pipe
+  cmd1 & cmd2      平行執行
+
+[額外功能]
+  help             列出所有指令
+  now              顯示目前日期時間
+  history          列出之前輸入過的指令
+  timeit <cmd>     執行指令並顯示花費時間
+  yee              召喚恐龍
+  art [name]       畫圖：dino / cat / rocket / coffee
+  run              恐龍走過螢幕的動畫
+  Ctrl+C           只中斷正在執行的指令，不會關掉 shell
+  封面             互動模式啟動時顯示
+  prompt           顯示 [時間] 使用者:目前目錄>
+
+錯誤時一律印出：An error has occurred
