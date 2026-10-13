@@ -1,17 +1,32 @@
 # yeeshell 🦖
 
+~~~
+==========================================================
+                 ___
+                / o \     RAWR!
+               |  ___>
+               | |         __   _______ _____ ____  _   _
+     _______   | |         \ \ / / ____| ____/ ___|| | | |
+   _/  . .  \__/ /          \ V /|  _| |  _| \___ \| |_| |
+  /  .   .  .   /            | | | |___| |___ ___) |  _  |
+ ~~\_  ____  __/             |_| |_____|_____|____/|_| |_|
+     | |  | | |
+     |_|  |_|_|              yeeshell - OS Project 1 Shell
+==========================================================
+~~~
+
 用 C 寫的簡易 Unix shell，OS 課程 Project 1（參考 OSTEP `wish`），另外加了一些額外功能。
 
 ## 編譯與執行
 
 需要 Linux / WSL / macOS。
 
-```bash
+~~~bash
 gcc -Wall -o yeeshell yeeshell.c
 
 ./yeeshell              # 互動模式
 ./yeeshell batch.txt    # batch 模式（從檔案讀指令）
-```
+~~~
 
 ## 功能
 
@@ -47,9 +62,12 @@ gcc -Wall -o yeeshell yeeshell.c
 
 ## 範例
 
-```
+~~~
 [21:30:12] yee:/home/yee> ls -l > out.txt
 [21:30:15] yee:/home/yee> cat < out.txt | wc -l
 [21:30:20] yee:/home/yee> timeit ls & pwd
 [21:30:25] yee:/home/yee> art cat
-```
+  /\_/\
+ ( o.o )
+  > ^ <   meow
+~~~
